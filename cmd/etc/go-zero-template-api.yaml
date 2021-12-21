@@ -1,0 +1,104 @@
+Name: go-zero-template-cmd
+Host: 0.0.0.0
+Port: 8888
+
+Auth:
+  AccessSecret: ad879037-c7a4-4063-9236-6bfc35d54b7d
+  AccessExpire: 86400
+
+aliyunOSS:
+  endpoint: yourEndpoint
+  accessKeyId: yourAccessKeyId
+  accessKeySecret: yourAccessKeySecret
+  bucketName: yourBucketName
+  bucketUrl: yourBucketUrl
+  basePath: yourBasePath
+autoCode:
+  transferRestart: true
+  root: D:\MXY\goProgect\go-zero-template/cmd-2.4.4
+  server: /server
+  serverApi: /api/v1/autocode
+  serverInitialize: /initialize
+  serverModel: /model/autocode
+  serverRequest: /model/autocode/request/
+  serverRouter: /router/autocode
+  serverService: /service/autocode
+  web: /web/src
+  webApi: /api
+  webForm: /view
+  webTable: /view
+  webFlow: /view
+captcha:
+  keyLong: 6
+  imgWidth: 240
+  imgHeight: 80
+Casbin:
+  ModelPath: resource/rbac_model.conf
+email:
+  to: xxx@qq.com
+  port: 465
+  from: xxx@163.com
+  host: smtp.163.com
+  isSSL: true
+  secret: xxx
+  nickname: test
+excel:
+  dir: ./resource/excel/
+JWT:
+  SigningKey: qmPlus
+  ExpiresTime: 604800
+  BufferTime: 86400
+local:
+  path: uploads/file
+mysql:
+  path: 127.0.0.1:3306
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  dbname: gva
+  username: root
+  password: "123456"
+  maxIdleConns: 0
+  maxOpenConns: 0
+  logMode: ""
+  logZap: false
+qiniu:
+  zone: ZoneHuaDong
+  bucket: ""
+  imgPath: ""
+  useHttps: false
+  accessKey: ""
+  secretKey: ""
+  useCdnDomains: false
+redis:
+  db: 0
+  addr: 127.0.0.1:6379
+  password: ""
+system:
+  env: public
+  addr: 8888
+  dbType: mysql
+  ossType: local
+  useMultipoint: false
+tencentCOS:
+  bucket: xxxxx-10005608
+  region: ap-shanghai
+  secretID: xxxxxxxx
+  secretKey: xxxxxxxx
+  baseURL: https://gin.vue.admin
+  pathPrefix: go-zero-template/cmd
+timer:
+  start: true
+  spec: '@daily'
+  detail:
+    - tableName: sys_operation_records
+      compareField: created_at
+      interval: 2160h
+zap:
+  level: info
+  format: console
+  prefix: '[go-zero-template/cmd]'
+  director: ./log/
+  linkName: latest_log
+  showLine: true
+  encodeLevel: LowercaseColorLevelEncoder
+  stacktraceKey: stacktrace
+  logInConsole: true
