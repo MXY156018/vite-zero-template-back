@@ -7,7 +7,7 @@ import (
 )
 
 func CreateSysOperationRecord(sysOperationRecord types.SysOperationRecord) (err error) {
-	fmt.Sprintf("%v\n",sysOperationRecord)
+	fmt.Sprintf("%v\n", sysOperationRecord)
 	err = global.GVA_DB.Create(&sysOperationRecord).Error
 	return err
 }

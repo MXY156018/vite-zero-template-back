@@ -1,7 +1,7 @@
 package userhandler
 
 import (
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/internal/logic/user"
 	"go-zero-template/cmd/internal/svc"
 	"go-zero-template/cmd/internal/types"

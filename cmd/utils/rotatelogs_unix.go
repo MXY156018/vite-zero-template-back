@@ -1,10 +1,11 @@
+//go:build !windows
 // +build !windows
 
 package utils
 
 import (
-	"go-zero-template/cmd/global"
 	zaprotatelogs "github.com/lestrrat-go/file-rotatelogs"
+	"go-zero-template/cmd/global"
 	"go.uber.org/zap/zapcore"
 	"os"
 	"path"

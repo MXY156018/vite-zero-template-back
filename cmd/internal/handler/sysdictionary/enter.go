@@ -1,10 +1,11 @@
 package sysdictionaryhandler
 
 import (
-	"github.com/tal-tech/go-zero/rest"
+	"github.com/zeromicro/go-zero/rest"
 	"go-zero-template/cmd/internal/svc"
 	"net/http"
 )
+
 // 字典管理
 func RegisterHandlersAutocode(engine *rest.Server, serverCtx *svc.ServiceContext) {
 	engine.AddRoutes(

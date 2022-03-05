@@ -6,10 +6,11 @@ import (
 	"io"
 	"net/http"
 )
+
 var EnableDecoderUseNumber = false
 var EnableDecoderDisallowUnknownFields = false
 
-func Bind(req *http.Request,obj interface{})error{
+func Bind(req *http.Request, obj interface{}) error {
 	if req == nil || req.Body == nil {
 		return fmt.Errorf("invalid request")
 	}
@@ -28,6 +29,7 @@ func decodeJSON(r io.Reader, obj interface{}) error {
 	}
 	return validate(obj)
 }
+
 const (
 	MIMEJSON              = "application/json"
 	MIMEHTML              = "text/html"
@@ -88,8 +90,6 @@ var Validator StructValidator = &defaultValidator{}
 
 // These implement the Binding interface and can be used to bind the data
 // present in the request to struct instances.
-
-
 
 func validate(obj interface{}) error {
 	if Validator == nil {

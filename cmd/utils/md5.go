@@ -16,4 +16,3 @@ func MD5V(str []byte) string {
 	h.Write(str)
 	return hex.EncodeToString(h.Sum(nil))
 }
-

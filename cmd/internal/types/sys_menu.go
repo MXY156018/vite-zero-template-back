@@ -2,7 +2,6 @@ package types
 
 import "go-zero-template/cmd/global"
 
-
 func DefaultMenu() []SysBaseMenu {
 	return []SysBaseMenu{{
 		GVA_MODEL: global.GVA_MODEL{ID: 1},

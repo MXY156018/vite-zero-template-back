@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/tal-tech/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/logx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/internal/svc"
 	"go-zero-template/cmd/internal/types"

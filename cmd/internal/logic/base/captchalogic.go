@@ -3,7 +3,7 @@ package base
 import (
 	"context"
 	"github.com/mojocn/base64Captcha"
-	"github.com/tal-tech/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/logx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/internal/svc"
 	"go-zero-template/cmd/internal/types"
@@ -33,7 +33,7 @@ func (l *CaptchaLogic) Captcha() (*types.Result, error) {
 		global.GVA_LOG.Error("验证码获取失败!", zap.Any("err", err))
 		return &types.Result{
 			Code: 7,
-			Msg: "验证码获取失败",
+			Msg:  "验证码获取失败",
 		}, nil
 	} else {
 		return &types.Result{

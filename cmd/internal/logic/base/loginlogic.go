@@ -3,7 +3,7 @@ package base
 import (
 	"context"
 	"github.com/dgrijalva/jwt-go"
-	"github.com/tal-tech/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/logx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/internal/middleware"
 	"go-zero-template/cmd/internal/svc"
@@ -38,10 +38,10 @@ func (l *LoginLogic) Login(req types.Login) (*types.Result, error) {
 			global.GVA_LOG.Error("登陆失败! 用户名不存在或者密码错误!", zap.Any("err", err))
 			return &types.Result{
 				Code: 7,
-				Msg: "用户名不存在或密码错误",
+				Msg:  "用户名不存在或密码错误",
 			}, nil
-		}else{
-			return l.tokenNext(user),nil
+		} else {
+			return l.tokenNext(user), nil
 		}
 	} else {
 		return &types.Result{
@@ -50,20 +50,20 @@ func (l *LoginLogic) Login(req types.Login) (*types.Result, error) {
 	}
 }
 
-func (l *LoginLogic)JsonInBlacklist(r *http.Request)(*types.Result, error){
+func (l *LoginLogic) JsonInBlacklist(r *http.Request) (*types.Result, error) {
 	token := r.Header.Get("x-token")
 	jwt := types.JwtBlacklist{
-		Jwt: token,
+		Jwt:    token,
 		Status: 1,
 	}
 	if err := model.JwtServiceApp.JsonInBlacklist(jwt); err != nil {
 		global.GVA_LOG.Error("jwt作废失败!", zap.Any("err", err))
-		return &types.Result{Code: 7,Msg: "jwt作废失败"},nil
+		return &types.Result{Code: 7, Msg: "jwt作废失败"}, nil
 	}
-	return &types.Result{Code: 0,Msg: "jwt作废成功"},nil
+	return &types.Result{Code: 0, Msg: "jwt作废成功"}, nil
 }
 
-func (l *LoginLogic)tokenNext(user types.SysUser)*types.Result{
+func (l *LoginLogic) tokenNext(user types.SysUser) *types.Result {
 	j := &middleware.JWT{SigningKey: []byte(global.GVA_CONFIG.JWT.SigningKey)} // 唯一签名
 	claims := types.CustomClaims{
 		UUID:        user.UUID,
@@ -83,7 +83,7 @@ func (l *LoginLogic)tokenNext(user types.SysUser)*types.Result{
 		global.GVA_LOG.Error("获取token失败!", zap.Any("err", err))
 		return &types.Result{
 			Code: 7,
-			Msg: "获取token失败",
+			Msg:  "获取token失败",
 		}
 	}
 	if !global.GVA_CONFIG.System.UseMultipoint {
@@ -100,6 +100,6 @@ func (l *LoginLogic)tokenNext(user types.SysUser)*types.Result{
 	}
 	return &types.Result{
 		Code: 7,
-		Msg: "获取token失败",
+		Msg:  "获取token失败",
 	}
 }

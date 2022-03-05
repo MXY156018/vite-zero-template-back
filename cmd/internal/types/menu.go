@@ -22,7 +22,7 @@ type SysBaseMenuResponse struct {
 }
 type AddMenuAuthorityInfo struct {
 	Menus       []SysBaseMenu `json:"menus"`
-	AuthorityId string `json:"authorityId"` // 角色ID
+	AuthorityId string        `json:"authorityId"` // 角色ID
 }
 type GetAuthorityId struct {
 	AuthorityId string `json:"authorityId"` // 角色ID

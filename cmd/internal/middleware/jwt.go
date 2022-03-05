@@ -3,7 +3,7 @@ package middleware
 import (
 	"encoding/json"
 	"errors"
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/model"
 	"go.uber.org/zap"

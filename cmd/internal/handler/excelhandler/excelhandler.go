@@ -1,7 +1,7 @@
 package excelhandler
 
 import (
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/internal/logic/excel"
 	"go-zero-template/cmd/internal/svc"
 	"go-zero-template/cmd/internal/types"
@@ -49,7 +49,7 @@ func ExportExcelHandler(ctx *svc.ServiceContext) http.HandlerFunc {
 			return
 		}
 		l := excel.NewExcelLogic(r.Context(), ctx)
-		resp, err := l.ExportExcel(req,w,r)
+		resp, err := l.ExportExcel(req, w, r)
 
 		if err != nil {
 			httpx.Error(w, err)
@@ -66,7 +66,7 @@ func DownloadTemplateHandler(ctx *svc.ServiceContext) http.HandlerFunc {
 		//	return
 		//}
 		l := excel.NewExcelLogic(r.Context(), ctx)
-		resp, err := l.DownloadTemplate(w,r)
+		resp, err := l.DownloadTemplate(w, r)
 
 		if err != nil {
 			httpx.Error(w, err)

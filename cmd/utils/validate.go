@@ -5,10 +5,10 @@ package utils
 // license that can be found in the LICENSE file.
 
 import (
-"reflect"
-"sync"
+	"reflect"
+	"sync"
 
-"github.com/go-playground/validator/v10"
+	"github.com/go-playground/validator/v10"
 )
 
 type defaultValidator struct {

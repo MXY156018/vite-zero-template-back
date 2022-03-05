@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"encoding/json"
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/internal/types"
 	"go-zero-template/cmd/model"

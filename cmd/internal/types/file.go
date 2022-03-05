@@ -13,4 +13,3 @@ type ExaFileUploadAndDownload struct {
 type ExaFileResponse struct {
 	File ExaFileUploadAndDownload `json:"file"`
 }
-

@@ -1,7 +1,7 @@
 package basehandler
 
 import (
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/internal/logic/base"
 	"go-zero-template/cmd/internal/svc"
 	"net/http"

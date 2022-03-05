@@ -5,7 +5,7 @@ type CasbinInReceive struct {
 	CasbinInfos []CasbinInfo `json:"casbinInfos"`
 }
 type CasbinSearch struct {
-	AuthorityId string       `json:"authorityId"` // 权限id
+	AuthorityId string `json:"authorityId"` // 权限id
 }
 type PolicyPathResponse struct {
 	Paths []CasbinInfo `json:"paths"`

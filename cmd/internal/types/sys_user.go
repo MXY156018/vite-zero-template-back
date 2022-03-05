@@ -14,8 +14,8 @@ type ChangePasswordStruct struct {
 	NewPassword string `json:"newPassword"` // 新密码
 }
 type PageInfo struct {
-	Page     int `json:"page,optional" form:"page"`     // 页码
-	PageSize int `json:"pageSize" form:"pageSize"` // 每页大小
+	Page     int `json:"page,optional" form:"page"` // 页码
+	PageSize int `json:"pageSize" form:"pageSize"`  // 每页大小
 }
 type PageResult struct {
 	List     interface{} `json:"list"`

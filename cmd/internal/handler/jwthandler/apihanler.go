@@ -1,7 +1,7 @@
 package jwthandler
 
 import (
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/internal/logic/jwt"
 	"go-zero-template/cmd/internal/svc"
 	"net/http"

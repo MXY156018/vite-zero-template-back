@@ -3,7 +3,7 @@ package user
 import (
 	"context"
 	"fmt"
-	"github.com/tal-tech/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/logx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/internal/middleware"
 	"go-zero-template/cmd/internal/svc"
@@ -131,7 +131,7 @@ func (u *UserLogic) UserSetUserAuthority(req types.SetUserAuth, r *http.Request)
 		j := &middleware.JWT{SigningKey: []byte(global.GVA_CONFIG.JWT.SigningKey)} // 唯一签名
 		println(req.AuthorityId)
 		println(claims.AuthorityId)
-		fmt.Printf("%v\n",claims)
+		fmt.Printf("%v\n", claims)
 		claims.AuthorityId = req.AuthorityId
 		if token, err := j.CreateToken(*claims); err != nil {
 			global.GVA_LOG.Error("修改失败!", zap.Any("err", err))

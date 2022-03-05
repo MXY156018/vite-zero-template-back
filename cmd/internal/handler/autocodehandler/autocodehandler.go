@@ -1,7 +1,7 @@
 package autocodehandler
 
 import (
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/internal/logic/autocode"
 	"go-zero-template/cmd/internal/svc"
 	"go-zero-template/cmd/internal/types"
@@ -97,7 +97,7 @@ func CreateTempHandler(ctx *svc.ServiceContext) http.HandlerFunc {
 			return
 		}
 		l := autocode.NewAutoCodeLogic(r.Context(), ctx)
-		resp, err := l.CreateTemp(req,w,r)
+		resp, err := l.CreateTemp(req, w, r)
 		if err != nil {
 			httpx.Error(w, err)
 		} else {

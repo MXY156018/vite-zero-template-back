@@ -13,7 +13,9 @@ import (
 
 type CasbinService struct {
 }
+
 var CasbinServiceApp = new(CasbinService)
+
 func (casbinService *CasbinService) UpdateCasbin(authorityId string, casbinInfos []types.CasbinInfo) error {
 	casbinService.ClearCasbin(0, authorityId)
 	rules := [][]string{}
