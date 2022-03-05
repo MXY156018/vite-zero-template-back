@@ -3,7 +3,7 @@ package middleware
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/internal/types"
 	"go-zero-template/cmd/model"
@@ -61,9 +61,7 @@ func OperationRecord(next http.HandlerFunc) http.HandlerFunc {
 		//}
 		//c.Writer = writer
 
-
 		next(w, r)
-
 
 		//record.ErrorMessage = c.Errors.ByType(gin.ErrorTypePrivate).String()
 		record.Status = 1
@@ -75,4 +73,3 @@ func OperationRecord(next http.HandlerFunc) http.HandlerFunc {
 		}
 	}
 }
-

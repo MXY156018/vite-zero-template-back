@@ -2,7 +2,7 @@ package authority
 
 import (
 	"context"
-	"github.com/tal-tech/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/logx"
 	"go-zero-template/cmd/global"
 	"go-zero-template/cmd/internal/svc"
 	"go-zero-template/cmd/internal/types"
@@ -116,7 +116,6 @@ func (u *AuthorityLogic) SetDataAuthority(req types.SysAuthority) (*types.Result
 		global.GVA_LOG.Error("设置失败!", zap.Any("err", err))
 		return &types.Result{Code: 7, Msg: "设置失败!"}, nil
 	} else {
-		return &types.Result{Code: 0, Msg: "设置成功",
-		}, nil
+		return &types.Result{Code: 0, Msg: "设置成功"}, nil
 	}
 }

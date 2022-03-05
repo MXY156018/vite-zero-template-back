@@ -16,7 +16,6 @@ const (
 	GB = 1024 * MB
 )
 
-
 //@author: [SliverHorn](https://github.com/SliverHorn)
 //@function: InitCPU
 //@description: OS信息

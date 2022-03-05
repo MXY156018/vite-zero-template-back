@@ -1,6 +1,6 @@
 package config
 
-import "github.com/tal-tech/go-zero/rest"
+import "github.com/zeromicro/go-zero/rest"
 
 type Server struct {
 	rest.RestConf

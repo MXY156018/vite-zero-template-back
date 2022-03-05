@@ -2,8 +2,8 @@ package upload
 
 import (
 	"errors"
-	"go-zero-template/cmd/global"
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
+	"go-zero-template/cmd/global"
 	"go.uber.org/zap"
 	"mime/multipart"
 	"time"

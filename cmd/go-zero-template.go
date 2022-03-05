@@ -10,8 +10,8 @@ import (
 	"go-zero-template/cmd/internal/handler"
 	"go-zero-template/cmd/internal/svc"
 
-	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/rest"
+	"github.com/zeromicro/go-zero/core/conf"
+	"github.com/zeromicro/go-zero/rest"
 )
 
 var configFile = flag.String("f", "etc/go-zero-template-api.yaml", "the config file")
@@ -26,7 +26,7 @@ func main() {
 	server := rest.MustNewServer(c.RestConf)
 	defer server.Stop()
 
-	global.GVA_VP = core.Viper()      // 初始化Viper
+	global.GVA_VP = core.Viper()       // 初始化Viper
 	global.GVA_LOG = core.Zap(c)       // 初始化zap日志库
 	global.GVA_DB = initialize.Gorm(c) // gorm连接数据库
 	global.GVA_CONFIG = c

@@ -1,7 +1,7 @@
 package sysdictionaryhandler
 
 import (
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 	"go-zero-template/cmd/internal/logic/sysdictionary"
 	"go-zero-template/cmd/internal/types"
 	"go-zero-template/cmd/utils"
